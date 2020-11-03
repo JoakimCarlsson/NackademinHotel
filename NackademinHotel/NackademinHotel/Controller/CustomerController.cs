@@ -1,6 +1,6 @@
 ﻿namespace NackademinHotel.Controller
 {
-    public class PersonController
+    public class CustomerController
     {
         
     }
