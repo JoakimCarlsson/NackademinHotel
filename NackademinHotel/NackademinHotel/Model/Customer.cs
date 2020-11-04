@@ -7,7 +7,8 @@ namespace NackademinHotel.Model
 {
     public class Customer
     {
-        public int Id { get; private set; }
+        [Key]
+        public int Id { get; set; }
         [Required]
         [StringLength(25)]
         public string FirstName { get; private set; }

@@ -1,11 +1,39 @@
-﻿$HEADER$using System.Windows.Forms;
-namespace $NAMESPACE$
+﻿using System;
+using System.Windows.Forms;
+using NackademinHotel.Controller;
+using NackademinHotel.Model;
+
+namespace NackademinHotel
 {
-    public partial class $CLASS$ : Form
+    public partial class BookingForm : Form
     {
-        public $CLASS$()
+        BookingController _bookingController = new BookingController();
+        HotelRoomController _hotelRoomController = new HotelRoomController();
+        CustomerController _customerController = new CustomerController();
+        public BookingForm()
         {
             InitializeComponent();
+        }
+
+        private void BookingForm_Load(object sender, EventArgs e)
+        {
+            bookinListBox.DataSource = _bookingController.GetAll();
+            bookinListBox.SelectedIndex = -1;
+
+            availableRooms.DataSource = _hotelRoomController.GetAllAvailable();
+            availableRooms.SelectedIndex = -1;
+
+            customerComboBox.DataSource = _customerController.GetAll();
+        }
+
+        private void saveBookingbutton_Click(object sender, EventArgs e)
+        {
+            Customer customer = customerComboBox.SelectedItem as Customer;
+            HotelRoom hotelRoom = availableRooms.SelectedItem as HotelRoom;
+            DateTime startDate = this.startDate.Value;
+            DateTime endDate = this.endDate.Value;
+            
+            _bookingController.SaveBooking(customer, hotelRoom, startDate, endDate);
         }
     }
 }

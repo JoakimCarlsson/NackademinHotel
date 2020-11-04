@@ -49,6 +49,6 @@ C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\b
 C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\obj\Debug\netcoreapp3.1\NackademinHotel.csprojAssemblyReference.cache
 C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\obj\Debug\netcoreapp3.1\NackademinHotel.csproj.CoreCompileInputs.cache
 C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\obj\Debug\netcoreapp3.1\NackademinHotel.CustomerForm.resources
+C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\obj\Debug\netcoreapp3.1\NackademinHotel.BookingForm.resources

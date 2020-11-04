@@ -16,7 +16,7 @@ namespace NackademinHotel.Model
 
         public override string ToString()
         {
-            return $"Rums Nummer: {RoomNumber}, Rum Storlek: {RoomSize}, Double Rum: {(DoubleRoom ? "Ja" : "Nej")}";
+            return $"Nummer: {RoomNumber}, Storlek: {RoomSize}, Double Rum: {(DoubleRoom ? "Ja" : "Nej")}";
         }
     }
 }

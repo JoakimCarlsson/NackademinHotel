@@ -8,6 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20201103163148_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201103163148_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201104174942_test.cs" />
+    <Compile Remove="Migrations\20201104174942_test.Designer.cs" />
+    <Compile Remove="Migrations\20201104175100_test.cs" />
+    <Compile Remove="Migrations\20201104175100_test.Designer.cs" />
+    <Compile Remove="Migrations\20201104180653_AddFkOnBooking.cs" />
+    <Compile Remove="Migrations\20201104180653_AddFkOnBooking.Designer.cs" />
+    <Compile Remove="Migrations\20201104180835_AddFkOnBooking.cs" />
+    <Compile Remove="Migrations\20201104180835_AddFkOnBooking.Designer.cs" />
+    <Compile Remove="Migrations\20201104182802_test.cs" />
+    <Compile Remove="Migrations\20201104182802_test.Designer.cs" />
+    <Compile Remove="Migrations\20201104183104_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201104183104_InitialCreate.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="View\" />
   </ItemGroup>
 
@@ -25,12 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\CustomerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="View\MainForm.cs" />
+    <Compile Update="View\CustomerForm.cs" />
+    <Compile Update="View\BookingForm.cs" />
   </ItemGroup>
 
 </Project>

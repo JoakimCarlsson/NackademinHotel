@@ -8,6 +8,7 @@
     <e p="C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel" t="IncludeRecursive">
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controller" t="Include">
+        <e p="BookingController.cs" t="Include" />
         <e p="CustomerController.cs" t="Include" />
         <e p="HotelController.cs" t="Include" />
         <e p="HotelRoomController.cs" t="Include" />
@@ -38,6 +39,9 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
       <e p="View" t="Include">
+        <e p="BookingForm.cs" t="Include" />
+        <e p="BookingForm.Designer.cs" t="Include" />
+        <e p="BookingForm.resx" t="Include" />
         <e p="CustomerForm.cs" t="Include" />
         <e p="CustomerForm.Designer.cs" t="Include" />
         <e p="CustomerForm.resx" t="Include" />

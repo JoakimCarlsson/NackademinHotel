@@ -31,6 +31,11 @@
             this.customerListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.manageCustomer = new System.Windows.Forms.Button();
+            this.manageBookings = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bookingsListbox = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.availableRoomsListbox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // customerListBox
@@ -53,17 +58,64 @@
             // 
             this.manageCustomer.Location = new System.Drawing.Point(12, 240);
             this.manageCustomer.Name = "manageCustomer";
-            this.manageCustomer.Size = new System.Drawing.Size(92, 23);
+            this.manageCustomer.Size = new System.Drawing.Size(108, 23);
             this.manageCustomer.TabIndex = 2;
             this.manageCustomer.Text = "Hantera Kunder";
             this.manageCustomer.UseVisualStyleBackColor = true;
             this.manageCustomer.Click += new System.EventHandler(this.registerCustomer_Click);
+            // 
+            // manageBookings
+            // 
+            this.manageBookings.Location = new System.Drawing.Point(235, 240);
+            this.manageBookings.Name = "manageBookings";
+            this.manageBookings.Size = new System.Drawing.Size(108, 23);
+            this.manageBookings.TabIndex = 5;
+            this.manageBookings.Text = "Hantera Bokningar";
+            this.manageBookings.UseVisualStyleBackColor = true;
+            this.manageBookings.Click += new System.EventHandler(this.manageBookings_Click);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(235, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 23);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Aktiva Bokningar";
+            // 
+            // bookingsListbox
+            // 
+            this.bookingsListbox.FormattingEnabled = true;
+            this.bookingsListbox.Location = new System.Drawing.Point(235, 35);
+            this.bookingsListbox.Name = "bookingsListbox";
+            this.bookingsListbox.Size = new System.Drawing.Size(195, 199);
+            this.bookingsListbox.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(455, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 23);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Lediga Rum";
+            // 
+            // availableRoomsListbox
+            // 
+            this.availableRoomsListbox.FormattingEnabled = true;
+            this.availableRoomsListbox.Location = new System.Drawing.Point(455, 35);
+            this.availableRoomsListbox.Name = "availableRoomsListbox";
+            this.availableRoomsListbox.Size = new System.Drawing.Size(214, 199);
+            this.availableRoomsListbox.TabIndex = 6;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 390);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.availableRoomsListbox);
+            this.Controls.Add(this.manageBookings);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.bookingsListbox);
             this.Controls.Add(this.manageCustomer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerListBox);
@@ -75,6 +127,14 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.ListBox availableRoomsListbox;
+
+        private System.Windows.Forms.Label label3;
+
+        private System.Windows.Forms.ListBox bookingsListbox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button manageBookings;
 
         private System.Windows.Forms.Button manageCustomer;
 
