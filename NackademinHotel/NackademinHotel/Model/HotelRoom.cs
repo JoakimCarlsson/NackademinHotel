@@ -13,5 +13,10 @@ namespace NackademinHotel.Model
         public int HotelId { get; set; }
         public Hotel Hotel { get; set; }
         public ICollection<Booking>? Bookings { get; set; }
+
+        public override string ToString()
+        {
+            return $"Rums Nummer: {RoomNumber}, Rum Storlek: {RoomSize}, Double Rum: {(DoubleRoom ? "Ja" : "Nej")}";
+        }
     }
 }

@@ -1,4 +1,10 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Linq;
+using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using NackademinHotel.Data;
+using NackademinHotel.Model;
 
 namespace NackademinHotel
 {
@@ -7,6 +13,20 @@ namespace NackademinHotel
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            using (HotelContext hotelContext = new HotelContext())
+            {
+                customerListBox.DataSource = hotelContext.Customers;
+            }
+        }
+
+        private void registerCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerForm customerForm = new CustomerForm();
+            customerForm.Show();
         }
     }
 }

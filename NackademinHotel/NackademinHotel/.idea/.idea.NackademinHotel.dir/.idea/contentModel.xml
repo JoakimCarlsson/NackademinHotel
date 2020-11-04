@@ -38,6 +38,9 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
       <e p="View" t="Include">
+        <e p="CustomerForm.cs" t="Include" />
+        <e p="CustomerForm.Designer.cs" t="Include" />
+        <e p="CustomerForm.resx" t="Include" />
         <e p="MainForm.cs" t="Include" />
         <e p="MainForm.Designer.cs" t="Include" />
         <e p="MainForm.resx" t="Include" />
