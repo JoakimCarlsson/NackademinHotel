@@ -60,7 +60,7 @@ namespace NackademinHotel.Controller
             }
         }
 
-        public List<Customer> GetAll()
+        public IEnumerable<Customer> GetAll()
         {
             using (_hotelContext = new HotelContext())
             {

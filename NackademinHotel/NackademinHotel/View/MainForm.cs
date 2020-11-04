@@ -17,10 +17,7 @@ namespace NackademinHotel
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            using (HotelContext hotelContext = new HotelContext())
-            {
-                customerListBox.DataSource = hotelContext.Customers;
-            }
+            
         }
 
         private void registerCustomer_Click(object sender, EventArgs e)
