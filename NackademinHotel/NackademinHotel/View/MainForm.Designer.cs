@@ -68,6 +68,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerListBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Hotel Service";
             this.Load += new System.EventHandler(this.MainForm_Load);
