@@ -9,7 +9,6 @@ namespace NackademinHotel
     {
         BookingController _bookingController = new BookingController();
         HotelRoomController _hotelRoomController = new HotelRoomController();
-        CustomerController _customerController = new CustomerController();
         public BookingForm()
         {
             InitializeComponent();
@@ -20,23 +19,7 @@ namespace NackademinHotel
             bookinListBox.DataSource = _bookingController.GetAll();
             bookinListBox.SelectedIndex = -1;
 
-            availableRooms.DataSource = _hotelRoomController.GetAllAvailable();
-            availableRooms.SelectedIndex = -1;
-
-            customerComboBox.DataSource = _customerController.GetAll();
-        }
-
-        private void saveBookingbutton_Click(object sender, EventArgs e)
-        {
-            Customer customer = customerComboBox.SelectedItem as Customer;
-            HotelRoom hotelRoom = availableRooms.SelectedItem as HotelRoom;
-            DateTime startDate = this.startDate.Value;
-            DateTime endDate = this.endDate.Value;
-            
-            if (_bookingController.SaveBooking(customer, hotelRoom, startDate, endDate))
-            {
-                MessageBox.Show("Bokning är nu genomförd.");
-            }
+            GetRoomsAvailable();
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -46,6 +29,22 @@ namespace NackademinHotel
             {
                 MessageBox.Show("Du måste välja en bokning för att kundda redigera", "Fel", MessageBoxButtons.OK);
             }
+        }
+
+        private void startDate_ValueChanged(object sender, EventArgs e)
+        {
+            GetRoomsAvailable();
+        }
+
+        private void endDate_ValueChanged_1(object sender, EventArgs e)
+        {
+            GetRoomsAvailable();
+        }
+
+        private void GetRoomsAvailable()
+        {
+            availableRooms.DataSource = _hotelRoomController.GetAllAvailableBetweenDates(startDate.Value, endDate.Value);
+            availableRooms.SelectedIndex = -1;
         }
     }
 }

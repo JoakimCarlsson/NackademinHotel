@@ -18,10 +18,9 @@ namespace NackademinHotel.Model
 
         public HotelRoom()
         {
-            
         }
-        
-        public HotelRoom(int roomNumber, double roomSize,  Hotel hotel, int extraBeds ,bool doubleRoom = false)
+
+        public HotelRoom(int roomNumber, double roomSize, Hotel hotel, int extraBeds, bool doubleRoom = false)
         {
             RoomNumber = roomNumber;
             RoomSize = roomSize;
@@ -29,24 +28,44 @@ namespace NackademinHotel.Model
             ExtraBeds = extraBeds;
             Hotel = hotel;
         }
-        
+
         public override string ToString()
         {
             return $"Nummer: {RoomNumber}, Storlek: {RoomSize}, Double Rum: {(DoubleRoom ? "Ja" : "Nej")}";
         }
 
-        internal int MaxExtraBeds(HotelRoom room)
+        internal int MaxExtraBeds()
         {
-            if (!room.DoubleRoom)
+            if (!DoubleRoom)
                 return 0;
 
-            if (room.RoomSize >= 10 && room.RoomSize <= 15)
+            if (RoomSize >= 10 && RoomSize <= 15)
                 return 1;
 
-            if (room.RoomSize >= 15)
+            if (RoomSize >= 15)
                 return 2;
 
             return 0;
+        }
+
+        internal bool IsAviable()
+        {
+            if (Bookings.Count != 0)
+            {
+                foreach (Booking booking in Bookings)
+                {
+                    if (!booking.IsBooked())
+                    {
+                        return true;
+                    }
+                }
+            }
+            else
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

@@ -37,12 +37,10 @@ namespace NackademinHotel
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.startDate = new System.Windows.Forms.DateTimePicker();
             this.endDate = new System.Windows.Forms.DateTimePicker();
-            this.customerComboBox = new System.Windows.Forms.ComboBox();
-            this.saveBookingbutton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
+            this.bookRoom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bookinListBox
@@ -66,7 +64,7 @@ namespace NackademinHotel
             this.availableRooms.FormattingEnabled = true;
             this.availableRooms.Location = new System.Drawing.Point(222, 34);
             this.availableRooms.Name = "availableRooms";
-            this.availableRooms.Size = new System.Drawing.Size(182, 316);
+            this.availableRooms.Size = new System.Drawing.Size(205, 316);
             this.availableRooms.TabIndex = 2;
             // 
             // label2
@@ -79,7 +77,7 @@ namespace NackademinHotel
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(426, 34);
+            this.label3.Location = new System.Drawing.Point(441, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 24);
             this.label3.TabIndex = 4;
@@ -87,51 +85,27 @@ namespace NackademinHotel
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(426, 58);
+            this.label4.Location = new System.Drawing.Point(441, 64);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 24);
             this.label4.TabIndex = 5;
             this.label4.Text = "Slut Datum";
             // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(426, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Kund";
-            // 
             // startDate
             // 
-            this.startDate.Location = new System.Drawing.Point(511, 28);
+            this.startDate.Location = new System.Drawing.Point(526, 34);
             this.startDate.Name = "startDate";
             this.startDate.Size = new System.Drawing.Size(153, 20);
             this.startDate.TabIndex = 7;
+            this.startDate.ValueChanged += new System.EventHandler(this.startDate_ValueChanged);
             // 
             // endDate
             // 
-            this.endDate.Location = new System.Drawing.Point(511, 52);
+            this.endDate.Location = new System.Drawing.Point(526, 58);
             this.endDate.Name = "endDate";
             this.endDate.Size = new System.Drawing.Size(153, 20);
             this.endDate.TabIndex = 8;
-            // 
-            // customerComboBox
-            // 
-            this.customerComboBox.FormattingEnabled = true;
-            this.customerComboBox.Location = new System.Drawing.Point(511, 77);
-            this.customerComboBox.Name = "customerComboBox";
-            this.customerComboBox.Size = new System.Drawing.Size(153, 21);
-            this.customerComboBox.TabIndex = 10;
-            // 
-            // saveBookingbutton
-            // 
-            this.saveBookingbutton.Location = new System.Drawing.Point(426, 109);
-            this.saveBookingbutton.Name = "saveBookingbutton";
-            this.saveBookingbutton.Size = new System.Drawing.Size(84, 23);
-            this.saveBookingbutton.TabIndex = 11;
-            this.saveBookingbutton.Text = "Spara";
-            this.saveBookingbutton.UseVisualStyleBackColor = true;
-            this.saveBookingbutton.Click += new System.EventHandler(this.saveBookingbutton_Click);
+            this.endDate.ValueChanged += new System.EventHandler(this.endDate_ValueChanged_1);
             // 
             // editButton
             // 
@@ -143,17 +117,24 @@ namespace NackademinHotel
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
+            // bookRoom
+            // 
+            this.bookRoom.Location = new System.Drawing.Point(222, 354);
+            this.bookRoom.Name = "bookRoom";
+            this.bookRoom.Size = new System.Drawing.Size(109, 27);
+            this.bookRoom.TabIndex = 13;
+            this.bookRoom.Text = "Boka";
+            this.bookRoom.UseVisualStyleBackColor = true;
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(687, 450);
+            this.Controls.Add(this.bookRoom);
             this.Controls.Add(this.editButton);
-            this.Controls.Add(this.saveBookingbutton);
-            this.Controls.Add(this.customerComboBox);
             this.Controls.Add(this.endDate);
             this.Controls.Add(this.startDate);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -168,19 +149,16 @@ namespace NackademinHotel
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Button bookRoom;
+
         private System.Windows.Forms.Button editButton;
 
         private System.Windows.Forms.DateTimePicker endDate;
-
-        private System.Windows.Forms.Button saveBookingbutton;
-
-        private System.Windows.Forms.ComboBox customerComboBox;
 
         private System.Windows.Forms.DateTimePicker startDate;
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
 
         private System.Windows.Forms.ListBox availableRooms;
         private System.Windows.Forms.Label label2;

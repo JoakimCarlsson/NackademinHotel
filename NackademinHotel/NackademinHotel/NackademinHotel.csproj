@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Update="View\MainForm.cs" />
     <Compile Update="View\CustomerForm.cs" />
-    <Compile Update="View\BookingForm.cs" />
+    <Compile Update="View\BookingMainForm.cs" />
   </ItemGroup>
 
 </Project>
