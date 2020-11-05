@@ -37,7 +37,7 @@ namespace NackademinHotel
             roomSizeTextBox.Text = _hotelRoom.RoomSize.ToString();
             roomsNumberTextBox.Text = _hotelRoom.RoomNumber.ToString();
             doubleRoomTextBox.Text = _hotelRoom.DoubleRoom ? "Ja" : "Nej";
-            extraBedsTextBot.Text = _hotelRoom.ExtraBeds.ToString();
+            extraBedsTextBot.Text = "0";
         }
 
         private void saveBooking_Click(object sender, EventArgs e)

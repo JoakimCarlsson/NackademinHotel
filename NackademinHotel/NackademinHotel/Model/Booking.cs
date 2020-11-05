@@ -12,6 +12,7 @@ namespace NackademinHotel.Model
         [Required] public Customer Customer { get; set; }
         [Required] public Invoice Invoice { get; set; }
         [Required] public bool Annulled { get; set; }
+        public int? ExtraBeds { get; set; }
 
         internal bool IsBooked()
         {

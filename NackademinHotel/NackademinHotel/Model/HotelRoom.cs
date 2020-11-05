@@ -11,7 +11,6 @@ namespace NackademinHotel.Model
         public int RoomNumber { get; private set; }
         public double RoomSize { get; private set; }
         public bool DoubleRoom { get; private set; }
-        public int ExtraBeds { get; private set; }
         public int HotelId { get; private set; }
         public Hotel Hotel { get; private set; }
         public ICollection<Booking>? Bookings { get; private set; }
@@ -20,12 +19,11 @@ namespace NackademinHotel.Model
         {
         }
 
-        public HotelRoom(int roomNumber, double roomSize, Hotel hotel, int extraBeds, bool doubleRoom = false)
+        public HotelRoom(int roomNumber, double roomSize, Hotel hotel, bool doubleRoom = false)
         {
             RoomNumber = roomNumber;
             RoomSize = roomSize;
             DoubleRoom = doubleRoom;
-            ExtraBeds = extraBeds;
             Hotel = hotel;
         }
 
