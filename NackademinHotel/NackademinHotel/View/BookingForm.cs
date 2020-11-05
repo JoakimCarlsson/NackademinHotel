@@ -33,7 +33,10 @@ namespace NackademinHotel
             DateTime startDate = this.startDate.Value;
             DateTime endDate = this.endDate.Value;
             
-            _bookingController.SaveBooking(customer, hotelRoom, startDate, endDate);
+            if (_bookingController.SaveBooking(customer, hotelRoom, startDate, endDate))
+            {
+                MessageBox.Show("Bokning är nu genomförd.");
+            }
         }
     }
 }

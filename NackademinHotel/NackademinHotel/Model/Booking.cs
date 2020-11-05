@@ -5,8 +5,7 @@ namespace NackademinHotel.Model
 {
     public class Booking
     {
-        [Key]
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
         [Required] public DateTime StartBookDate { get; set; }
         [Required] public DateTime EndBookDate { get; set; }
         [Required] public HotelRoom HotelRoom { get; set; }
@@ -16,7 +15,7 @@ namespace NackademinHotel.Model
 
         internal bool IsBooked()
         {
-            return StartBookDate > DateTime.Today && DateTime.Today < EndBookDate;
+            return DateTime.Now >= StartBookDate && DateTime.Now < EndBookDate;
         }
 
         public override string ToString()

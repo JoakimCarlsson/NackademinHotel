@@ -19,7 +19,7 @@ namespace NackademinHotel.Controller
             }
         }
 
-        public void SaveBooking(Customer customer, HotelRoom hotelRoom, DateTime startDate, DateTime endDate)
+        public bool SaveBooking(Customer customer, HotelRoom hotelRoom, DateTime startDate, DateTime endDate)
         {
             using (dbContext = new HotelContext())
             {
@@ -38,7 +38,9 @@ namespace NackademinHotel.Controller
                 };
 
                 dbContext.Bookings.Add(booking);
-                dbContext.SaveChanges(); 
+                dbContext.SaveChanges();
+
+                return true;
             }
         }
 
