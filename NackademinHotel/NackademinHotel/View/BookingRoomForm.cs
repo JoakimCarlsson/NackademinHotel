@@ -9,6 +9,7 @@ namespace NackademinHotel
     {
         private HotelRoom _hotelRoom;
         private CustomerController _customerController = new CustomerController();
+        private BookingController _bookingController = new BookingController();
         public BookingRoomForm(HotelRoom hotelRoom)
         {
             InitializeComponent();
@@ -41,6 +42,19 @@ namespace NackademinHotel
 
         private void saveBooking_Click(object sender, EventArgs e)
         {
+            Customer customer = customerListBox.SelectedItem as Customer;
+            if (customer == null)
+            {
+                MessageBox.Show("Du måste välja kund för att boka", "Fel", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (_hotelRoom.MaxExtraBeds() < Convert.ToInt32(extraBedsTextBot.Text))
+            {
+                MessageBox.Show("För många extra sängar, rum över 20m2 kan ha 2, annars 1.", "Fel", MessageBoxButtons.OK);
+                return;
+            }
+            
             
         }
 
