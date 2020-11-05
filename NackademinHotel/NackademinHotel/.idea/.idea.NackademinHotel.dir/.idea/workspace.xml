@@ -23,13 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e1b428e-6acd-4188-a0da-8d5f3b691871" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.vs/NackademinHotel/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/NackademinHotel/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/BookingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/HotelRoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/HotelRoomController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Booking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Booking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/BookingForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/View/BookingForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/HotelRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/HotelRoom.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.pdb" afterDir="false" />
     </list>
@@ -43,6 +44,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D5EDF430-AB5A-4412-A0B9-E75F3C32EB0A/187/ModelValidator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9C37662-579A-499A-A4DE-B3C85349280D/41/cbae9f82/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D5EDF430-AB5A-4412-A0B9-E75F3C32EB0A/12F/ConstructorBindingConvention.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1166BCED-26EC-4C60-9990-23602F086AAE/EE/ListControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D5EDF430-AB5A-4412-A0B9-E75F3C32EB0A/AA/QueryableMethodTranslatingExpressionVisitor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9C37662-579A-499A-A4DE-B3C85349280D/1d/e149dc41/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
@@ -58,14 +61,14 @@
         <option value="$PROJECT_DIR$/Controller/HotelController.cs" />
         <option value="$PROJECT_DIR$/View/CustomerForm.cs" />
         <option value="$PROJECT_DIR$/Model/Customer.cs" />
-        <option value="$PROJECT_DIR$/Model/HotelRoom.cs" />
         <option value="$PROJECT_DIR$/Controller/CustomerController.cs" />
         <option value="$PROJECT_DIR$/View/MainForm.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
-        <option value="$PROJECT_DIR$/Controller/BookingController.cs" />
         <option value="$PROJECT_DIR$/View/BookingForm.cs" />
-        <option value="$PROJECT_DIR$/Controller/HotelRoomController.cs" />
         <option value="$PROJECT_DIR$/Model/Booking.cs" />
+        <option value="$PROJECT_DIR$/Controller/BookingController.cs" />
+        <option value="$PROJECT_DIR$/Controller/HotelRoomController.cs" />
+        <option value="$PROJECT_DIR$/Model/HotelRoom.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +124,8 @@
       <workItem from="1604507906018" duration="287000" />
       <workItem from="1604508473997" duration="991000" />
       <workItem from="1604565388865" duration="184000" />
-      <workItem from="1604569241205" duration="1902000" />
+      <workItem from="1604569241205" duration="10466000" />
+      <workItem from="1604587369373" duration="5016000" />
     </task>
     <task id="LOCAL−00001" summary="test commit form Rider, new ide.">
       <created>1604491931557</created>
@@ -166,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604569489023</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Now we don't see rooms that are booked today. So we can't book a room that is currently booked.">
+      <created>1604571465354</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604571465354</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,93 +204,94 @@
     <MESSAGE value="Quick fix too CustomerController.cs and CustomerForm.Designer.cs" />
     <MESSAGE value="Design Fix." />
     <MESSAGE value="We can now book a room for a customer.&#10;We should at a later date try too set up Depencdey Injection unless we want too map Entity everytime we want too save something from the DB." />
-    <option name="LAST_COMMIT_MESSAGE" value="We can now book a room for a customer.&#10;We should at a later date try too set up Depencdey Injection unless we want too map Entity everytime we want too save something from the DB." />
+    <MESSAGE value="Now we don't see rooms that are booked today. So we can't book a room that is currently booked." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now we don't see rooms that are booked today. So we can't book a room that is currently booked." />
   </component>
   <component name="WindowStateProjectService">
-    <state width="523" height="436" key="DebuggerActiveHint" timestamp="1604570966955">
+    <state width="523" height="436" key="DebuggerActiveHint" timestamp="1604571381364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="523" height="436" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1604570966955" />
-    <state width="1877" height="195" key="GridCell.Tab.0.bottom" timestamp="1604571106322">
+    <state width="523" height="436" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1604571381364" />
+    <state width="1877" height="195" key="GridCell.Tab.0.bottom" timestamp="1604592626936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106322" />
-    <state width="1877" height="195" key="GridCell.Tab.0.center" timestamp="1604571106322">
+    <state width="1877" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626936" />
+    <state width="1877" height="195" key="GridCell.Tab.0.center" timestamp="1604592626936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106322" />
-    <state width="1877" height="195" key="GridCell.Tab.0.left" timestamp="1604571106322">
+    <state width="1877" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626936" />
+    <state width="1877" height="195" key="GridCell.Tab.0.left" timestamp="1604592626936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106322" />
-    <state width="1877" height="195" key="GridCell.Tab.0.right" timestamp="1604571106322">
+    <state width="1877" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626936" />
+    <state width="1877" height="195" key="GridCell.Tab.0.right" timestamp="1604592626936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106322" />
-    <state width="1877" height="195" key="GridCell.Tab.1.bottom" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626936" />
+    <state width="1877" height="195" key="GridCell.Tab.1.bottom" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.1.center" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.1.center" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.1.left" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.1.left" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.1.right" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.1.right" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.2.bottom" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.2.bottom" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.2.center" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.2.center" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.2.left" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.2.left" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.2.right" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.2.right" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.3.bottom" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.3.bottom" timestamp="1604592626780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.3.center" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626780" />
+    <state width="1877" height="195" key="GridCell.Tab.3.center" timestamp="1604592626780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.3.left" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626780" />
+    <state width="1877" height="195" key="GridCell.Tab.3.left" timestamp="1604592626779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.3.right" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626779" />
+    <state width="1877" height="195" key="GridCell.Tab.3.right" timestamp="1604592626780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.4.bottom" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626780" />
+    <state width="1877" height="195" key="GridCell.Tab.4.bottom" timestamp="1604592626780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.4.center" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626780" />
+    <state width="1877" height="195" key="GridCell.Tab.4.center" timestamp="1604592626780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.4.left" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626780" />
+    <state width="1877" height="195" key="GridCell.Tab.4.left" timestamp="1604592626780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
-    <state width="1877" height="195" key="GridCell.Tab.4.right" timestamp="1604571106154">
+    <state width="1877" height="195" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626780" />
+    <state width="1877" height="195" key="GridCell.Tab.4.right" timestamp="1604592626780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604571106154" />
+    <state width="1877" height="195" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604592626780" />
     <state x="835" y="469" key="Items removing confirmation dialog" timestamp="1604508564196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -296,32 +308,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604492869831" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604569497990">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604571482226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604569497990" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604571482226" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604509146635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604509146635" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Model/Booking.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\Model\Booking.cs" initialLine="19">
-            <startOffsets>
-              <option value="668" />
-            </startOffsets>
-            <endOffsets>
-              <option value="680" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

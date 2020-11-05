@@ -9,36 +9,35 @@ namespace NackademinHotel.Controller
 {
     public class BookingController
     {
-        private HotelContext dbContext;
+        private HotelContext _dbContext;
         public IEnumerable<Booking> GetAll()
         {
-            using (dbContext = new HotelContext())
+            using (_dbContext = new HotelContext())
             {
-                var test = dbContext.Bookings.Include(b => b.Customer).Include(b => b.Invoice).ToList();
-                return test;
+                return _dbContext.Bookings.Include(b => b.Customer).Include(b => b.Invoice).ToList();
             }
         }
 
         public bool SaveBooking(Customer customer, HotelRoom hotelRoom, DateTime startDate, DateTime endDate)
         {
-            using (dbContext = new HotelContext())
+            using (_dbContext = new HotelContext())
             {
                 Booking booking = new Booking
                 {
-                    Customer = dbContext.Customers.FirstOrDefault(c => c.Id == customer.Id),
+                    Customer = _dbContext.Customers.FirstOrDefault(c => c.Id == customer.Id),
                     StartBookDate = startDate,
                     EndBookDate = endDate,
-                    HotelRoom = dbContext.HotelRooms.Include(h => h.Hotel).FirstOrDefault(h => h.Id == hotelRoom.Id),
+                    HotelRoom = _dbContext.HotelRooms.Include(h => h.Hotel).FirstOrDefault(h => h.Id == hotelRoom.Id),
                     Annulled = false,
                     Invoice = new Invoice
                     {
-                        BookedDate = startDate,
+                        BookedDate = DateTime.Today,
                         Payed = true,
                     }
                 };
 
-                dbContext.Bookings.Add(booking);
-                dbContext.SaveChanges();
+                _dbContext.Bookings.Add(booking);
+                _dbContext.SaveChanges();
 
                 return true;
             }
@@ -46,8 +45,9 @@ namespace NackademinHotel.Controller
 
         private void RemoveBooking(Booking booking)
         {
-            dbContext.Remove(booking);
-            dbContext.SaveChanges();
+            _dbContext.Remove(booking);
+            _dbContext.Remove(booking.Invoice);
+            _dbContext.SaveChanges();
         }
     }
 }

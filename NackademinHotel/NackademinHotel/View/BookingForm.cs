@@ -38,5 +38,14 @@ namespace NackademinHotel
                 MessageBox.Show("Bokning är nu genomförd.");
             }
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            Booking booking = bookinListBox.SelectedItem as Booking;
+            if (booking == null)
+            {
+                MessageBox.Show("Du måste välja en bokning för att kundda redigera", "Fel", MessageBoxButtons.OK);
+            }
+        }
     }
 }

@@ -24,7 +24,6 @@ namespace NackademinHotel.Controller
                         {
                             hotelRooms.Add(hotelRoom);
                         }
-                        
                     }
                 }
                 else

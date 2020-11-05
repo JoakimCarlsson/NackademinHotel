@@ -42,6 +42,7 @@ namespace NackademinHotel
             this.endDate = new System.Windows.Forms.DateTimePicker();
             this.customerComboBox = new System.Windows.Forms.ComboBox();
             this.saveBookingbutton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bookinListBox
@@ -132,11 +133,22 @@ namespace NackademinHotel
             this.saveBookingbutton.UseVisualStyleBackColor = true;
             this.saveBookingbutton.Click += new System.EventHandler(this.saveBookingbutton_Click);
             // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(14, 354);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(109, 27);
+            this.editButton.TabIndex = 12;
+            this.editButton.Text = "Redigera";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.saveBookingbutton);
             this.Controls.Add(this.customerComboBox);
             this.Controls.Add(this.endDate);
@@ -155,6 +167,8 @@ namespace NackademinHotel
             this.Load += new System.EventHandler(this.BookingForm_Load);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button editButton;
 
         private System.Windows.Forms.DateTimePicker endDate;
 
