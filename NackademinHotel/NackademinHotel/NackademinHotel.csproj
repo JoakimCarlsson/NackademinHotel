@@ -22,6 +22,9 @@
     <Compile Remove="Migrations\20201104182802_test.Designer.cs" />
     <Compile Remove="Migrations\20201104183104_InitialCreate.cs" />
     <Compile Remove="Migrations\20201104183104_InitialCreate.Designer.cs" />
+    <Compile Update="View\BookingRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

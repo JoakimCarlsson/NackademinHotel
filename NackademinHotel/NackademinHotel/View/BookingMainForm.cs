@@ -46,5 +46,19 @@ namespace NackademinHotel
             availableRooms.DataSource = _hotelRoomController.GetAllAvailableBetweenDates(startDate.Value, endDate.Value);
             availableRooms.SelectedIndex = -1;
         }
+
+        private void bookRoom_Click(object sender, EventArgs e)
+        {
+            HotelRoom hotelRoom = availableRooms.SelectedItem as HotelRoom;
+            if (hotelRoom == null)
+            {
+                MessageBox.Show("Du måste måsta först välja ett rum.");
+            }
+            else
+            {
+                BookingRoomForm bookingRoomForm = new BookingRoomForm(hotelRoom);
+                bookingRoomForm.Show();
+            }
+        }
     }
 }

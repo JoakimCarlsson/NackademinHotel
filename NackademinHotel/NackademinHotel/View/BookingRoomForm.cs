@@ -1,0 +1,59 @@
+﻿using System;
+using System.Windows.Forms;
+using NackademinHotel.Controller;
+using NackademinHotel.Model;
+
+namespace NackademinHotel
+{
+    public partial class BookingRoomForm : Form
+    {
+        private HotelRoom _hotelRoom;
+        private CustomerController _customerController = new CustomerController();
+        public BookingRoomForm(HotelRoom hotelRoom)
+        {
+            InitializeComponent();
+            _hotelRoom = hotelRoom;
+        }
+
+        private void BookingRoomForm_Load(object sender, EventArgs e)
+        {
+            UpdateCustomerListBox();
+            SetupRoomInformation();
+        }
+
+        private void UpdateCustomerListBox()
+        {
+            customerListBox.DataSource = _customerController.GetAll();
+            customerListBox.SelectedIndex = -1;
+        }
+
+        private void SetupRoomInformation()
+        {
+            roomSizeTextBox.Enabled = false;
+            roomsNumberTextBox.Enabled = false;
+            doubleRoomTextBox.Enabled = false;
+
+            roomSizeTextBox.Text = _hotelRoom.RoomSize.ToString();
+            roomsNumberTextBox.Text = _hotelRoom.RoomNumber.ToString();
+            doubleRoomTextBox.Text = _hotelRoom.DoubleRoom ? "Ja" : "Nej";
+            extraBedsTextBot.Text = _hotelRoom.ExtraBeds.ToString();
+        }
+
+        private void saveBooking_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void editCustomerButton_Click(object sender, EventArgs e)
+        {
+            CustomerForm customerForm = new CustomerForm();
+            customerForm.FormClosed += customerForm_FormClosed;
+            customerForm.Show();
+        }
+
+        private void customerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            UpdateCustomerListBox();
+        }
+    }
+}

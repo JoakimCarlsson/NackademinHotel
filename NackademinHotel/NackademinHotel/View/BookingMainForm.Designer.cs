@@ -125,6 +125,7 @@ namespace NackademinHotel
             this.bookRoom.TabIndex = 13;
             this.bookRoom.Text = "Boka";
             this.bookRoom.UseVisualStyleBackColor = true;
+            this.bookRoom.Click += new System.EventHandler(this.bookRoom_Click);
             // 
             // BookingForm
             // 

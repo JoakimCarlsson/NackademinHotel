@@ -42,6 +42,9 @@
         <e p="BookingMainForm.cs" t="Include" />
         <e p="BookingMainForm.Designer.cs" t="Include" />
         <e p="BookingMainForm.resx" t="Include" />
+        <e p="BookingRoomForm.cs" t="Include" />
+        <e p="BookingRoomForm.Designer.cs" t="Include" />
+        <e p="BookingRoomForm.resx" t="Include" />
         <e p="CustomerForm.cs" t="Include" />
         <e p="CustomerForm.Designer.cs" t="Include" />
         <e p="CustomerForm.resx" t="Include" />
