@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using NackademinHotel.Data;
 using NackademinHotel.Model;
 
@@ -7,38 +9,43 @@ namespace NackademinHotel.Controller
 {
     public class BookingController
     {
-        private HotelContext _hotelContext;
+        private HotelContext dbContext;
         public IEnumerable<Booking> GetAll()
         {
-            using (_hotelContext = new HotelContext())
+            using (dbContext = new HotelContext())
             {
-                return _hotelContext.Bookings;
+                var test = dbContext.Bookings.Include(b => b.Customer).Include(b => b.Invoice).ToList();
+                return test;
             }
         }
 
         public void SaveBooking(Customer customer, HotelRoom hotelRoom, DateTime startDate, DateTime endDate)
         {
-            Booking booking = new Booking
+            using (dbContext = new HotelContext())
             {
-                Customer =  customer, 
-                StartBookDate = startDate,
-                EndBookDate =  endDate,
-                HotelRoom = hotelRoom,
-                Annulled =  false,
-                
-            };
+                Booking booking = new Booking
+                {
+                    Customer = dbContext.Customers.FirstOrDefault(c => c.Id == customer.Id),
+                    StartBookDate = startDate,
+                    EndBookDate = endDate,
+                    HotelRoom = dbContext.HotelRooms.Include(h => h.Hotel).FirstOrDefault(h => h.Id == hotelRoom.Id),
+                    Annulled = false,
+                    Invoice = new Invoice
+                    {
+                        BookedDate = startDate,
+                        Payed = true,
+                    }
+                };
 
-            using (_hotelContext = new HotelContext())
-            {
-                _hotelContext.Bookings.Add(booking);
-                _hotelContext.SaveChanges(); 
+                dbContext.Bookings.Add(booking);
+                dbContext.SaveChanges(); 
             }
         }
 
         private void RemoveBooking(Booking booking)
         {
-            _hotelContext.Remove(booking);
-            _hotelContext.SaveChanges();
+            dbContext.Remove(booking);
+            dbContext.SaveChanges();
         }
     }
 }

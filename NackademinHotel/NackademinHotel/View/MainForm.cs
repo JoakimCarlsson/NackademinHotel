@@ -27,7 +27,6 @@ namespace NackademinHotel
             customerListBox.DataSource = _customerController.GetAll();
             bookingsListbox.DataSource = _bookingController.GetAll();
             availableRoomsListbox.DataSource = _hotelRoomController.GetAllAvailable();
-
         }
 
         private void registerCustomer_Click(object sender, EventArgs e)
