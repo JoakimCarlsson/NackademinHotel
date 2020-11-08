@@ -29,6 +29,11 @@ namespace NackademinHotel
             {
                 MessageBox.Show("Du måste välja en bokning för att kundda redigera", "Fel", MessageBoxButtons.OK);
             }
+            else
+            {
+                BookingEditForm bookingEditForm = new BookingEditForm(bookinListBox.SelectedItem as Booking);
+                bookingEditForm.Show();
+            }
         }
 
         private void startDate_ValueChanged(object sender, EventArgs e)

@@ -15,7 +15,10 @@ namespace NackademinHotel.Controller
         {
             using (_dbContext = new HotelContext())
             {
-                return _dbContext.Bookings.Include(b => b.Customer).Include(b => b.Invoice).ToList();
+                return _dbContext.Bookings.Include(b => b.Customer).
+                    Include(b => b.Invoice).
+                    Include(b => b.HotelRoom).
+                    Include(b => b.Customer).ToList();
             }
         }
 
@@ -23,7 +26,11 @@ namespace NackademinHotel.Controller
         {
             using (_dbContext = new HotelContext())
             {
-                return _dbContext.Bookings.Include(b => b.Customer).Include(b => b.Invoice).Where(b => !b.Annulled).ToList();
+                return _dbContext.Bookings.Include(b => b.Customer).
+                    Include(b => b.Invoice).
+                    Include(b => b.HotelRoom).
+                    Include(b => b.Customer)
+                    .Where(b => !b.Annulled).ToList();
             }
         }
 
@@ -54,6 +61,27 @@ namespace NackademinHotel.Controller
             _dbContext.Remove(booking);
             _dbContext.Remove(booking.Invoice);
             _dbContext.SaveChanges();
+        }
+
+        public bool UpdateBooking(Booking booking)
+        {
+            using (_dbContext = new HotelContext())
+            {
+                _dbContext.Update(booking);
+                _dbContext.SaveChanges();
+                return true;
+            }
+        }
+
+        public bool CancelBooking(Booking booking)
+        {
+            using (_dbContext = new HotelContext())
+            {
+                booking.Annulled = true;
+                _dbContext.Update(booking);
+                _dbContext.SaveChanges();
+                return true;
+            }
         }
     }
 }
