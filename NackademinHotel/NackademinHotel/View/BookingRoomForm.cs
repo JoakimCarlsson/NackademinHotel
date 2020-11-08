@@ -47,20 +47,27 @@ namespace NackademinHotel
 
         private void saveBooking_Click(object sender, EventArgs e)
         {
-            Customer customer = customerListBox.SelectedItem as Customer;
-            if (customer == null)
+            try
             {
-                MessageBox.Show("Du måste välja kund för att boka", "Fel", MessageBoxButtons.OK);
-            }
-            else
-            {
-                int extraBeds = (int) extraBedsComboBox.SelectedItem;
-                bool payed = payedCheckBox.Checked;
-                if (_bookingController.SaveBooking(customer, _hotelRoom, extraBeds, _startDate, _endDate, payed))
+                Customer customer = customerListBox.SelectedItem as Customer;
+                if (customer == null)
                 {
-                    MessageBox.Show("Bokningen är nu genomförd", "Lyckades", MessageBoxButtons.OK);
-                    Close();
+                    MessageBox.Show("Du måste välja kund för att boka", "Fel", MessageBoxButtons.OK);
                 }
+                else
+                {
+                    int extraBeds = (int) extraBedsComboBox.SelectedItem;
+                    bool payed = payedCheckBox.Checked;
+                    if (_bookingController.SaveBooking(customer, _hotelRoom, extraBeds, _startDate, _endDate, payed))
+                    {
+                        MessageBox.Show("Bokningen är nu genomförd", "Lyckades", MessageBoxButtons.OK);
+                        Close();
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Fel", MessageBoxButtons.OK);
             }
         }
 

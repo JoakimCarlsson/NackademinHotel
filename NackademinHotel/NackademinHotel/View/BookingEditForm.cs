@@ -26,14 +26,21 @@ namespace NackademinHotel
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill spara?", "?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            try
             {
-                int extraBeds = (int)extraBedsComboBox.SelectedItem;
-                if (_bookingController.UpdateBooking(_booking, startDatePicker.Value, endTimePicker.Value, payedCheckBox.Checked,extraBeds))
+                DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill spara?", "?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Sparat");
+                    int extraBeds = (int)extraBedsComboBox.SelectedItem;
+                    if (_bookingController.UpdateBooking(_booking, startDatePicker.Value, endTimePicker.Value, payedCheckBox.Checked,extraBeds))
+                    {
+                        MessageBox.Show("Sparat");
+                    }
                 }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Fel", MessageBoxButtons.OK);
             }
         }
         
