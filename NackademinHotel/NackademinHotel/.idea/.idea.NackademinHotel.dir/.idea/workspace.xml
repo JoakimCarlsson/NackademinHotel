@@ -23,17 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e1b428e-6acd-4188-a0da-8d5f3b691871" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.BookingEditForm.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/BookingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/BookingEditForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/View/BookingEditForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Booking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Booking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Invoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Invoice.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/BookingEditForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/View/BookingEditForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/BookingMainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/View/BookingMainForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.pdb" afterDir="false" />
     </list>
@@ -79,16 +75,16 @@
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/View/BookingForm.cs" />
         <option value="$PROJECT_DIR$/View/CustomerForm.cs" />
-        <option value="$PROJECT_DIR$/Model/Booking.cs" />
         <option value="$PROJECT_DIR$/Model/HotelRoom.cs" />
         <option value="$PROJECT_DIR$/Controller/HotelRoomController.cs" />
-        <option value="$PROJECT_DIR$/Model/Invoice.cs" />
         <option value="$PROJECT_DIR$/Controller/InvoiceController.cs" />
         <option value="$PROJECT_DIR$/View/BookingRoomForm.cs" />
         <option value="$PROJECT_DIR$/View/MainForm.cs" />
         <option value="$PROJECT_DIR$/View/BookingMainForm.cs" />
-        <option value="$PROJECT_DIR$/View/BookingEditForm.cs" />
+        <option value="$PROJECT_DIR$/Model/Booking.cs" />
+        <option value="$PROJECT_DIR$/Model/Invoice.cs" />
         <option value="$PROJECT_DIR$/Controller/BookingController.cs" />
+        <option value="$PROJECT_DIR$/View/BookingEditForm.cs" />
       </list>
     </option>
   </component>
@@ -153,7 +149,7 @@
       <workItem from="1604600503553" duration="4988000" />
       <workItem from="1604839220216" duration="5241000" />
       <workItem from="1604845106692" duration="159000" />
-      <workItem from="1604845762788" duration="4529000" />
+      <workItem from="1604845762788" duration="5997000" />
     </task>
     <task id="LOCAL−00001" summary="test commit form Rider, new ide.">
       <created>1604491931557</created>
@@ -310,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604848142830</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="We can now edit a existing booking, we can also cancel a booking. But we don't remove it from the database, we just set it as annulled.">
+      <created>1604850592512</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1604850592512</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,93 +353,94 @@
     <MESSAGE value="Now the user have an option too pay the invoice directly when they book." />
     <MESSAGE value="Missing Changes." />
     <MESSAGE value="We now get all Active bookings in the Main form, if an booking is annulled we will not see it. &#10;&#10;Also added a form too edit a booking that has been made previously." />
-    <option name="LAST_COMMIT_MESSAGE" value="We now get all Active bookings in the Main form, if an booking is annulled we will not see it. &#10;&#10;Also added a form too edit a booking that has been made previously." />
+    <MESSAGE value="We can now edit a existing booking, we can also cancel a booking. But we don't remove it from the database, we just set it as annulled." />
+    <option name="LAST_COMMIT_MESSAGE" value="We can now edit a existing booking, we can also cancel a booking. But we don't remove it from the database, we just set it as annulled." />
   </component>
   <component name="WindowStateProjectService">
     <state width="523" height="436" key="DebuggerActiveHint" timestamp="1604849255497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="523" height="436" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1604849255497" />
-    <state width="1877" height="195" key="GridCell.Tab.0.bottom" timestamp="1604850124843">
+    <state width="1877" height="195" key="GridCell.Tab.0.bottom" timestamp="1604851332580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124843" />
-    <state width="1877" height="195" key="GridCell.Tab.0.center" timestamp="1604850124843">
+    <state width="1877" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332580" />
+    <state width="1877" height="195" key="GridCell.Tab.0.center" timestamp="1604851332580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124843" />
-    <state width="1877" height="195" key="GridCell.Tab.0.left" timestamp="1604850124843">
+    <state width="1877" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332580" />
+    <state width="1877" height="195" key="GridCell.Tab.0.left" timestamp="1604851332580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124843" />
-    <state width="1877" height="195" key="GridCell.Tab.0.right" timestamp="1604850124843">
+    <state width="1877" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332580" />
+    <state width="1877" height="195" key="GridCell.Tab.0.right" timestamp="1604851332580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124843" />
-    <state width="1877" height="195" key="GridCell.Tab.1.bottom" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332580" />
+    <state width="1877" height="195" key="GridCell.Tab.1.bottom" timestamp="1604851332414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.1.center" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332414" />
+    <state width="1877" height="195" key="GridCell.Tab.1.center" timestamp="1604851332414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.1.left" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332414" />
+    <state width="1877" height="195" key="GridCell.Tab.1.left" timestamp="1604851332414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.1.right" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332414" />
+    <state width="1877" height="195" key="GridCell.Tab.1.right" timestamp="1604851332414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.2.bottom" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332414" />
+    <state width="1877" height="195" key="GridCell.Tab.2.bottom" timestamp="1604851332414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.2.center" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332414" />
+    <state width="1877" height="195" key="GridCell.Tab.2.center" timestamp="1604851332414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.2.left" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332414" />
+    <state width="1877" height="195" key="GridCell.Tab.2.left" timestamp="1604851332414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.2.right" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332414" />
+    <state width="1877" height="195" key="GridCell.Tab.2.right" timestamp="1604851332414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.3.bottom" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332414" />
+    <state width="1877" height="195" key="GridCell.Tab.3.bottom" timestamp="1604851332415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.3.center" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332415" />
+    <state width="1877" height="195" key="GridCell.Tab.3.center" timestamp="1604851332415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.3.left" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332415" />
+    <state width="1877" height="195" key="GridCell.Tab.3.left" timestamp="1604851332415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.3.right" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332415" />
+    <state width="1877" height="195" key="GridCell.Tab.3.right" timestamp="1604851332415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.4.bottom" timestamp="1604850124683">
+    <state width="1877" height="195" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332415" />
+    <state width="1877" height="195" key="GridCell.Tab.4.bottom" timestamp="1604851332415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124683" />
-    <state width="1877" height="195" key="GridCell.Tab.4.center" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332415" />
+    <state width="1877" height="195" key="GridCell.Tab.4.center" timestamp="1604851332415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.4.left" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332415" />
+    <state width="1877" height="195" key="GridCell.Tab.4.left" timestamp="1604851332415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
-    <state width="1877" height="195" key="GridCell.Tab.4.right" timestamp="1604850124682">
+    <state width="1877" height="195" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332415" />
+    <state width="1877" height="195" key="GridCell.Tab.4.right" timestamp="1604851332415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="195" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604850124682" />
+    <state width="1877" height="195" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604851332415" />
     <state x="835" y="469" key="Items removing confirmation dialog" timestamp="1604508564196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -453,10 +457,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604597930887" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604848145386">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604850597723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604848145386" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604850597723" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604509146635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -23,5 +23,10 @@ namespace NackademinHotel.Model
             BookedDate = dateTime;
             Payed = payed;
         }
+
+        public void IsPayed(bool paid)
+        {
+            Payed = paid;
+        }
     }
 }

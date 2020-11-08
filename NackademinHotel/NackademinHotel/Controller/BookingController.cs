@@ -63,8 +63,12 @@ namespace NackademinHotel.Controller
             _dbContext.SaveChanges();
         }
 
-        public bool UpdateBooking(Booking booking)
+        public bool UpdateBooking(Booking booking, DateTime startDate, DateTime endDate, bool paid, int extraBeds)
         {
+            booking.SetDates(startDate, endDate);
+            booking.Invoice.IsPayed(paid);
+            booking.ExtraBeds = extraBeds;
+            
             using (_dbContext = new HotelContext())
             {
                 _dbContext.Update(booking);

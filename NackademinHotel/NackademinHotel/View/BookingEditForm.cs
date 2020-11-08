@@ -29,7 +29,8 @@ namespace NackademinHotel
             DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill spara?", "?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                if (_bookingController.UpdateBooking(_booking))
+                int extraBeds = (int)extraBedsComboBox.SelectedItem;
+                if (_bookingController.UpdateBooking(_booking, startDatePicker.Value, endTimePicker.Value, payedCheckBox.Checked,extraBeds))
                 {
                     MessageBox.Show("Sparat");
                 }
