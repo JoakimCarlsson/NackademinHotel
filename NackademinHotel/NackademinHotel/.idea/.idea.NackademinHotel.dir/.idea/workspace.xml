@@ -26,6 +26,8 @@
       <change beforePath="$PROJECT_DIR$/../.vs/NackademinHotel/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/NackademinHotel/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/NackademinHotel/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/NackademinHotel/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/BookingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/HotelRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/HotelRoom.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/BookingRoomForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/View/BookingRoomForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/BookingRoomForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/View/BookingRoomForm.cs" afterDir="false" />
@@ -74,7 +76,6 @@
         <option value="$PROJECT_DIR$/Model/Customer.cs" />
         <option value="$PROJECT_DIR$/Controller/CustomerController.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
-        <option value="$PROJECT_DIR$/Controller/BookingController.cs" />
         <option value="$PROJECT_DIR$/View/MainForm.cs" />
         <option value="$PROJECT_DIR$/View/BookingForm.cs" />
         <option value="$PROJECT_DIR$/Controller/HotelRoomController.cs" />
@@ -82,6 +83,7 @@
         <option value="$PROJECT_DIR$/View/CustomerForm.cs" />
         <option value="$PROJECT_DIR$/Model/Booking.cs" />
         <option value="$PROJECT_DIR$/Model/HotelRoom.cs" />
+        <option value="$PROJECT_DIR$/Controller/BookingController.cs" />
         <option value="$PROJECT_DIR$/View/BookingRoomForm.cs" />
       </list>
     </option>
@@ -145,7 +147,7 @@
       <workItem from="1604587369373" duration="6180000" />
       <workItem from="1604597408938" duration="3052000" />
       <workItem from="1604600503553" duration="4988000" />
-      <workItem from="1604839220216" duration="757000" />
+      <workItem from="1604839220216" duration="1528000" />
     </task>
     <task id="LOCAL−00001" summary="test commit form Rider, new ide.">
       <created>1604491931557</created>
@@ -239,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604605407038</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Extra beds is now a drop down, and we can choose 0-2 extra beds depending on the rooms size.">
+      <created>1604841269565</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1604841269565</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +281,8 @@
     <MESSAGE value="We can now get all the available rooms between two dates." />
     <MESSAGE value="Changed the UI when we book a room, the backend too book a room is not implemented yet." />
     <MESSAGE value="Improved UI for booking a room. &#10;Also added Error handling before we book a room." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved UI for booking a room. &#10;Also added Error handling before we book a room." />
+    <MESSAGE value="Extra beds is now a drop down, and we can choose 0-2 extra beds depending on the rooms size." />
+    <option name="LAST_COMMIT_MESSAGE" value="Extra beds is now a drop down, and we can choose 0-2 extra beds depending on the rooms size." />
   </component>
   <component name="WindowStateProjectService">
     <state width="523" height="436" key="DebuggerActiveHint" timestamp="1604597651569">
@@ -375,10 +385,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604597930887" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604605410732">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604841271290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604605410732" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604841271290" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604509146635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
