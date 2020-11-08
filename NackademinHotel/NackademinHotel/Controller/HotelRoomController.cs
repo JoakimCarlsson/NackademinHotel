@@ -49,8 +49,7 @@ namespace NackademinHotel.Controller
 
                     foreach (Booking hotelRoomBooking in hotelRoom.Bookings)
                     {
-                        if(startDate <= hotelRoomBooking.StartBookDate && endDate <= hotelRoomBooking.StartBookDate 
-                           || startDate >= hotelRoomBooking.EndBookDate && endDate >= hotelRoomBooking.EndBookDate)
+                        if(startDate <= hotelRoomBooking.StartBookDate && endDate <= hotelRoomBooking.StartBookDate || startDate >= hotelRoomBooking.EndBookDate && endDate >= hotelRoomBooking.EndBookDate || hotelRoomBooking.Annulled)
                         {
                             tmpList.Add(hotelRoom);
                         }
