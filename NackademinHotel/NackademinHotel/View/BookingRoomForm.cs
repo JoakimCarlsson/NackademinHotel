@@ -55,7 +55,8 @@ namespace NackademinHotel
             else
             {
                 int extraBeds = (int) extraBedsComboBox.SelectedItem;
-                if (_bookingController.SaveBooking(customer, _hotelRoom, extraBeds, _startDate, _endDate))
+                bool payed = payedCheckBox.Checked;
+                if (_bookingController.SaveBooking(customer, _hotelRoom, extraBeds, _startDate, _endDate, payed))
                 {
                     MessageBox.Show("Bokningen är nu genomförd", "Lyckades", MessageBoxButtons.OK);
                     Close();

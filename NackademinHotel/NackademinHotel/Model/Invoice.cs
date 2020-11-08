@@ -11,16 +11,17 @@ namespace NackademinHotel.Model
         [Required]
         public DateTime BookedDate { get; private set; }
         [Required]
-        public bool Payed { get; set; }
+        public bool Payed { get; private set; }
 
         public Invoice()
         {
             
         }
 
-        public Invoice(DateTime dateTime)
+        public Invoice(DateTime dateTime, bool payed)
         {
             BookedDate = dateTime;
+            Payed = payed;
         }
     }
 }

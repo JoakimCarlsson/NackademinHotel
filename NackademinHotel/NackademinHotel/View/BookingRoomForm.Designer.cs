@@ -42,6 +42,7 @@ namespace NackademinHotel
             this.customerListBox = new System.Windows.Forms.ListBox();
             this.editCustomerButton = new System.Windows.Forms.Button();
             this.extraBedsComboBox = new System.Windows.Forms.ComboBox();
+            this.payedCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -133,11 +134,21 @@ namespace NackademinHotel
             this.extraBedsComboBox.Size = new System.Drawing.Size(86, 21);
             this.extraBedsComboBox.TabIndex = 12;
             // 
+            // payedCheckBox
+            // 
+            this.payedCheckBox.Location = new System.Drawing.Point(14, 157);
+            this.payedCheckBox.Name = "payedCheckBox";
+            this.payedCheckBox.Size = new System.Drawing.Size(95, 22);
+            this.payedCheckBox.TabIndex = 14;
+            this.payedCheckBox.Text = "Betala";
+            this.payedCheckBox.UseVisualStyleBackColor = true;
+            // 
             // BookingRoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 247);
+            this.Controls.Add(this.payedCheckBox);
             this.Controls.Add(this.extraBedsComboBox);
             this.Controls.Add(this.editCustomerButton);
             this.Controls.Add(this.customerListBox);
@@ -158,6 +169,8 @@ namespace NackademinHotel
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.CheckBox payedCheckBox;
 
         private System.Windows.Forms.ComboBox extraBedsComboBox;
 

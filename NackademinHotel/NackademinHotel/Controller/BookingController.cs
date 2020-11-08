@@ -19,7 +19,7 @@ namespace NackademinHotel.Controller
             }
         }
 
-        public bool SaveBooking(Customer customer, HotelRoom hotelRoom,int extraBeds, DateTime startDate, DateTime endDate)
+        public bool SaveBooking(Customer customer, HotelRoom hotelRoom,int extraBeds, DateTime startDate, DateTime endDate, bool payed)
         {
             using (_dbContext = new HotelContext())
             {
@@ -31,7 +31,7 @@ namespace NackademinHotel.Controller
                     HotelRoom = _dbContext.HotelRooms.Include(h => h.Hotel).FirstOrDefault(h => h.Id == hotelRoom.Id),
                     Annulled = false,
                     ExtraBeds = extraBeds,
-                    Invoice = _invoiceController.CreateInvoice(DateTime.Today),
+                    Invoice = _invoiceController.CreateInvoice(DateTime.Today, payed),
                 };
 
                 _dbContext.Bookings.Add(booking);

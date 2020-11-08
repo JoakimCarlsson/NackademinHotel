@@ -5,9 +5,9 @@ namespace NackademinHotel.Controller
 {
     public class InvoiceController
     {
-        internal Invoice CreateInvoice(DateTime bookedDate)
+        internal Invoice CreateInvoice(DateTime bookedDate, bool payed)
         {
-            return new Invoice(bookedDate);
+            return new Invoice(bookedDate, payed);
         }
     }
 }
