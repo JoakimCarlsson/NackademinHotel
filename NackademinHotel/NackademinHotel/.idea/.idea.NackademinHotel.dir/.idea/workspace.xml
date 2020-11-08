@@ -42,12 +42,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1166BCED-26EC-4C60-9990-23602F086AAE/160/TextBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D5EDF430-AB5A-4412-A0B9-E75F3C32EB0A/12F/ConstructorBindingConvention.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1166BCED-26EC-4C60-9990-23602F086AAE/EE/ListControl.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Carlsson/source/repos/NackademinHotel/NackademinHotel/NackademinHotel/Controller/BookingController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Carlsson/source/repos/NackademinHotel/NackademinHotel/NackademinHotel/Controller/BookingController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/22687544-4834-424D-BFF1-CDCC05534800/A/HashSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D5EDF430-AB5A-4412-A0B9-E75F3C32EB0A/187/ModelValidator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9C37662-579A-499A-A4DE-B3C85349280D/41/cbae9f82/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Carlsson/source/repos/NackademinHotel/NackademinHotel/NackademinHotel/Controller/HotelRoomController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9C37662-579A-499A-A4DE-B3C85349280D/f4/b6d3b9fc/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1166BCED-26EC-4C60-9990-23602F086AAE/12B/PropertyStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1166BCED-26EC-4C60-9990-23602F086AAE/39/Control.cs" root0="SKIP_HIGHLIGHTING" />
@@ -140,6 +137,7 @@
       <workItem from="1604597408938" duration="3052000" />
       <workItem from="1604600503553" duration="4988000" />
       <workItem from="1604839220216" duration="5241000" />
+      <workItem from="1604845106692" duration="159000" />
     </task>
     <task id="LOCAL−00001" summary="test commit form Rider, new ide.">
       <created>1604491931557</created>
@@ -268,7 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604844974162</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Now the user have an option too pay the invoice directly when they book.">
+      <created>1604845154731</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1604845154731</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Now the user have an option too pay the invoice directly when they book.">
+      <created>1604845184264</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1604845184264</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +302,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="test commit form Rider, new ide." />
     <MESSAGE value="We can now create a new customer, edit, and delete a customer that does not have any bookings." />
