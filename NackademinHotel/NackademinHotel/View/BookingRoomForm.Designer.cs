@@ -38,10 +38,10 @@ namespace NackademinHotel
             this.roomSizeTextBox = new System.Windows.Forms.TextBox();
             this.doubleRoomTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.extraBedsTextBot = new System.Windows.Forms.TextBox();
             this.saveBooking = new System.Windows.Forms.Button();
             this.customerListBox = new System.Windows.Forms.ListBox();
             this.editCustomerButton = new System.Windows.Forms.Button();
+            this.extraBedsComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -97,13 +97,6 @@ namespace NackademinHotel
             this.label4.TabIndex = 7;
             this.label4.Text = "Extra sängar";
             // 
-            // extraBedsTextBot
-            // 
-            this.extraBedsTextBot.Location = new System.Drawing.Point(98, 122);
-            this.extraBedsTextBot.Name = "extraBedsTextBot";
-            this.extraBedsTextBot.Size = new System.Drawing.Size(88, 20);
-            this.extraBedsTextBot.TabIndex = 8;
-            // 
             // saveBooking
             // 
             this.saveBooking.Location = new System.Drawing.Point(12, 192);
@@ -132,15 +125,23 @@ namespace NackademinHotel
             this.editCustomerButton.UseVisualStyleBackColor = true;
             this.editCustomerButton.Click += new System.EventHandler(this.editCustomerButton_Click);
             // 
+            // extraBedsComboBox
+            // 
+            this.extraBedsComboBox.FormattingEnabled = true;
+            this.extraBedsComboBox.Location = new System.Drawing.Point(99, 122);
+            this.extraBedsComboBox.Name = "extraBedsComboBox";
+            this.extraBedsComboBox.Size = new System.Drawing.Size(86, 21);
+            this.extraBedsComboBox.TabIndex = 12;
+            // 
             // BookingRoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 247);
+            this.Controls.Add(this.extraBedsComboBox);
             this.Controls.Add(this.editCustomerButton);
             this.Controls.Add(this.customerListBox);
             this.Controls.Add(this.saveBooking);
-            this.Controls.Add(this.extraBedsTextBot);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.doubleRoomTextBox);
             this.Controls.Add(this.roomSizeTextBox);
@@ -158,13 +159,13 @@ namespace NackademinHotel
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.ComboBox extraBedsComboBox;
+
         private System.Windows.Forms.Button editCustomerButton;
 
         private System.Windows.Forms.ListBox customerListBox;
 
         private System.Windows.Forms.Button saveBooking;
-
-        private System.Windows.Forms.TextBox extraBedsTextBot;
 
         private System.Windows.Forms.Label label4;
 

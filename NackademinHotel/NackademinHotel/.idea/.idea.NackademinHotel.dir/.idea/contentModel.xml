@@ -19,6 +19,8 @@
       <e p="Migrations" t="Include">
         <e p="20201104193342_InitialCreate.cs" t="Include" />
         <e p="20201104193342_InitialCreate.Designer.cs" t="Include" />
+        <e p="20201105194858_AddedExtraBedsBooking.cs" t="Include" />
+        <e p="20201105194858_AddedExtraBedsBooking.Designer.cs" t="Include" />
         <e p="HotelContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Model" t="Include">

@@ -18,7 +18,7 @@ namespace NackademinHotel.Controller
             }
         }
 
-        public bool SaveBooking(Customer customer, HotelRoom hotelRoom, DateTime startDate, DateTime endDate)
+        public bool SaveBooking(Customer customer, HotelRoom hotelRoom,int extraBeds, DateTime startDate, DateTime endDate)
         {
             using (_dbContext = new HotelContext())
             {

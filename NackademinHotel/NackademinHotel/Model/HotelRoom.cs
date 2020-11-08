@@ -32,18 +32,18 @@ namespace NackademinHotel.Model
             return $"Nummer: {RoomNumber}, Storlek: {RoomSize}, Double Rum: {(DoubleRoom ? "Ja" : "Nej")}";
         }
 
-        internal int MaxExtraBeds()
+        internal int[] MaxExtraBeds()
         {
             if (!DoubleRoom)
-                return 0;
+                return new []{0};
 
             if (RoomSize >= 10 && RoomSize <= 15)
-                return 1;
+                return new []{0,1};
 
             if (RoomSize >= 15)
-                return 2;
+                return new []{0,1,2};
 
-            return 0;
+            return new []{0};
         }
 
         internal bool IsAviable()

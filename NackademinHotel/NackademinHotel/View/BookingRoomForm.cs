@@ -37,7 +37,7 @@ namespace NackademinHotel
             roomSizeTextBox.Text = _hotelRoom.RoomSize.ToString();
             roomsNumberTextBox.Text = _hotelRoom.RoomNumber.ToString();
             doubleRoomTextBox.Text = _hotelRoom.DoubleRoom ? "Ja" : "Nej";
-            extraBedsTextBot.Text = "0";
+            extraBedsComboBox.DataSource = _hotelRoom.MaxExtraBeds();
         }
 
         private void saveBooking_Click(object sender, EventArgs e)
@@ -48,14 +48,10 @@ namespace NackademinHotel
                 MessageBox.Show("Du måste välja kund för att boka", "Fel", MessageBoxButtons.OK);
                 return;
             }
-
-            if (_hotelRoom.MaxExtraBeds() < Convert.ToInt32(extraBedsTextBot.Text))
+            else
             {
-                MessageBox.Show("För många extra sängar, rum över 20m2 kan ha 2, annars 1.", "Fel", MessageBoxButtons.OK);
-                return;
+                
             }
-            
-            
         }
 
         private void editCustomerButton_Click(object sender, EventArgs e)
