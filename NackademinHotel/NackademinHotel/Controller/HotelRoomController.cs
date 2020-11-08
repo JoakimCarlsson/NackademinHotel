@@ -24,6 +24,7 @@ namespace NackademinHotel.Controller
                         hotelRooms.Add(hotelRoom);
                     }
                 }
+
                 return hotelRooms;
             }
         }
@@ -41,11 +42,15 @@ namespace NackademinHotel.Controller
                 foreach (HotelRoom hotelRoom in _hotelContext.HotelRooms.Include(h => h.Bookings))
                 {
                     if (hotelRoom.Bookings.Count == 0)
+                    {
                         tmpList.Add(hotelRoom);
-                    
+                        continue;
+                    }
+
                     foreach (Booking hotelRoomBooking in hotelRoom.Bookings)
                     {
-                        if (startDate >= hotelRoomBooking.StartBookDate && endDate <= hotelRoomBooking.EndBookDate)
+                        if(startDate <= hotelRoomBooking.StartBookDate && endDate <= hotelRoomBooking.StartBookDate 
+                           || startDate >= hotelRoomBooking.EndBookDate && endDate >= hotelRoomBooking.EndBookDate)
                         {
                             tmpList.Add(hotelRoom);
                         }
