@@ -12,6 +12,7 @@
         <e p="CustomerController.cs" t="Include" />
         <e p="HotelController.cs" t="Include" />
         <e p="HotelRoomController.cs" t="Include" />
+        <e p="InvoiceController.cs" t="Include" />
       </e>
       <e p="Data" t="Include">
         <e p="HotelContext.cs" t="Include" />

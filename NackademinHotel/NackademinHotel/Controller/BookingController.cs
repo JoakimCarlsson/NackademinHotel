@@ -10,6 +10,7 @@ namespace NackademinHotel.Controller
     public class BookingController
     {
         private HotelContext _dbContext;
+        private InvoiceController _invoiceController = new InvoiceController();
         public IEnumerable<Booking> GetAll()
         {
             using (_dbContext = new HotelContext())
@@ -29,11 +30,8 @@ namespace NackademinHotel.Controller
                     EndBookDate = endDate,
                     HotelRoom = _dbContext.HotelRooms.Include(h => h.Hotel).FirstOrDefault(h => h.Id == hotelRoom.Id),
                     Annulled = false,
-                    Invoice = new Invoice
-                    {
-                        BookedDate = DateTime.Today,
-                        Payed = true,
-                    }
+                    ExtraBeds = extraBeds,
+                    Invoice = _invoiceController.CreateInvoice(DateTime.Today),
                 };
 
                 _dbContext.Bookings.Add(booking);

@@ -8,12 +8,17 @@ namespace NackademinHotel
     public partial class BookingRoomForm : Form
     {
         private HotelRoom _hotelRoom;
+        private DateTime _startDate;
+        private DateTime _endDate;
         private CustomerController _customerController = new CustomerController();
         private BookingController _bookingController = new BookingController();
-        public BookingRoomForm(HotelRoom hotelRoom)
+
+        public BookingRoomForm(HotelRoom hotelRoom, DateTime startDate, DateTime endDate)
         {
             InitializeComponent();
             _hotelRoom = hotelRoom;
+            _startDate = startDate;
+            _endDate = endDate;
         }
 
         private void BookingRoomForm_Load(object sender, EventArgs e)
@@ -46,11 +51,15 @@ namespace NackademinHotel
             if (customer == null)
             {
                 MessageBox.Show("Du måste välja kund för att boka", "Fel", MessageBoxButtons.OK);
-                return;
             }
             else
             {
-                
+                int extraBeds = (int) extraBedsComboBox.SelectedItem;
+                if (_bookingController.SaveBooking(customer, _hotelRoom, extraBeds, _startDate, _endDate))
+                {
+                    MessageBox.Show("Bokningen är nu genomförd", "Lyckades", MessageBoxButtons.OK);
+                    Close();
+                }
             }
         }
 

@@ -9,8 +9,18 @@ namespace NackademinHotel.Model
     {
         public int Id { get; set; }
         [Required]
-        public DateTime BookedDate { get; set; }
+        public DateTime BookedDate { get; private set; }
         [Required]
         public bool Payed { get; set; }
+
+        public Invoice()
+        {
+            
+        }
+
+        public Invoice(DateTime dateTime)
+        {
+            BookedDate = dateTime;
+        }
     }
 }
