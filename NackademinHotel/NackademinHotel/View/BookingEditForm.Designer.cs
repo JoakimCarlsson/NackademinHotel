@@ -48,6 +48,7 @@ namespace NackademinHotel
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.cancelBooking = new System.Windows.Forms.Button();
+            this.anulledCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -122,7 +123,7 @@ namespace NackademinHotel
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(94, 156);
+            this.saveButton.Location = new System.Drawing.Point(12, 183);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(109, 23);
             this.saveButton.TabIndex = 9;
@@ -177,7 +178,7 @@ namespace NackademinHotel
             // 
             // cancelBooking
             // 
-            this.cancelBooking.Location = new System.Drawing.Point(346, 156);
+            this.cancelBooking.Location = new System.Drawing.Point(346, 183);
             this.cancelBooking.Name = "cancelBooking";
             this.cancelBooking.Size = new System.Drawing.Size(109, 23);
             this.cancelBooking.TabIndex = 16;
@@ -185,11 +186,21 @@ namespace NackademinHotel
             this.cancelBooking.UseVisualStyleBackColor = true;
             this.cancelBooking.Click += new System.EventHandler(this.cancelBooking_Click);
             // 
+            // anulledCheckBox
+            // 
+            this.anulledCheckBox.Location = new System.Drawing.Point(10, 156);
+            this.anulledCheckBox.Name = "anulledCheckBox";
+            this.anulledCheckBox.Size = new System.Drawing.Size(76, 18);
+            this.anulledCheckBox.TabIndex = 17;
+            this.anulledCheckBox.Text = "Avbokad";
+            this.anulledCheckBox.UseVisualStyleBackColor = true;
+            // 
             // BookingEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 198);
+            this.ClientSize = new System.Drawing.Size(468, 231);
+            this.Controls.Add(this.anulledCheckBox);
             this.Controls.Add(this.cancelBooking);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.firstNameTextBox);
@@ -216,6 +227,8 @@ namespace NackademinHotel
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.CheckBox anulledCheckBox;
 
         private System.Windows.Forms.Button cancelBooking;
 

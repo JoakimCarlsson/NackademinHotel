@@ -23,12 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e1b428e-6acd-4188-a0da-8d5f3b691871" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NackademinHotel.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/HotelRoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/HotelRoomController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NackademinHotel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/NackademinHotel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/BookingRoomForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/View/BookingRoomForm.Designer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +142,7 @@
       <workItem from="1604839220216" duration="5241000" />
       <workItem from="1604845106692" duration="159000" />
       <workItem from="1604845762788" duration="7106000" />
-      <workItem from="1604853398655" duration="294000" />
+      <workItem from="1604853398655" duration="631000" />
     </task>
     <task id="LOCAL−00001" summary="test commit form Rider, new ide.">
       <created>1604491931557</created>
@@ -332,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604852592173</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="If an booking is annulled we'll now see that room as available.">
+      <created>1604853971495</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1604853971495</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +378,8 @@
     <MESSAGE value="I lied earlier, we can now update an existing booking." />
     <MESSAGE value="Added error handling so we can set our end date before start date." />
     <MESSAGE value="Removed Spacings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed Spacings" />
+    <MESSAGE value="If an booking is annulled we'll now see that room as available." />
+    <option name="LAST_COMMIT_MESSAGE" value="If an booking is annulled we'll now see that room as available." />
   </component>
   <component name="WindowStateProjectService">
     <state width="523" height="436" key="DebuggerActiveHint" timestamp="1604853666144">
@@ -487,24 +490,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604509146635" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controller/HotelRoomController.cs</url>
-          <line>50</line>
-          <properties documentPath="C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\Controller\HotelRoomController.cs" initialLine="50">
-            <startOffsets>
-              <option value="1586" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1587" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

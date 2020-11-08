@@ -48,6 +48,7 @@ namespace NackademinHotel
             firstNameTextBox.Enabled = false;
             lastNameTextBox.Enabled = false;
             dateOfBirthPicker.Enabled = false;
+            anulledCheckBox.Enabled = false;
 
             startDatePicker.Value = _booking.StartBookDate;
             endTimePicker.Value = _booking.EndBookDate;
@@ -59,6 +60,7 @@ namespace NackademinHotel
             firstNameTextBox.Text = _booking.Customer.FirstName;
             lastNameTextBox.Text = _booking.Customer.LastName;
             dateOfBirthPicker.Value = _booking.Customer.SocialSecurityNumber;
+            anulledCheckBox.Checked = _booking.Annulled;
         }
 
         private void cancelBooking_Click(object sender, EventArgs e)
