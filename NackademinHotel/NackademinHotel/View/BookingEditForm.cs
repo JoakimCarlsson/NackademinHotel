@@ -22,8 +22,6 @@ namespace NackademinHotel
             LoadBookingInformation();
         }
 
-
-
         private void saveButton_Click(object sender, EventArgs e)
         {
             try
