@@ -25,6 +25,9 @@
     <Compile Update="View\BookingRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\BookingEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

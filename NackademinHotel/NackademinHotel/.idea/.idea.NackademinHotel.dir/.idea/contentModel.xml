@@ -42,6 +42,8 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
       <e p="View" t="Include">
+        <e p="BookingEditForm.cs" t="Include" />
+        <e p="BookingEditForm.Designer.cs" t="Include" />
         <e p="BookingMainForm.cs" t="Include" />
         <e p="BookingMainForm.Designer.cs" t="Include" />
         <e p="BookingMainForm.resx" t="Include" />

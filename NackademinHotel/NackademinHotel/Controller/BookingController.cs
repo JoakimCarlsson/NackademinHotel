@@ -19,6 +19,14 @@ namespace NackademinHotel.Controller
             }
         }
 
+        public IEnumerable<Booking> GetAllActive()
+        {
+            using (_dbContext = new HotelContext())
+            {
+                return _dbContext.Bookings.Include(b => b.Customer).Include(b => b.Invoice).Where(b => !b.Annulled).ToList();
+            }
+        }
+
         public bool SaveBooking(Customer customer, HotelRoom hotelRoom,int extraBeds, DateTime startDate, DateTime endDate, bool payed)
         {
             using (_dbContext = new HotelContext())

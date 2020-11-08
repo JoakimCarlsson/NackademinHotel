@@ -25,7 +25,7 @@ namespace NackademinHotel
         private void MainForm_Load(object sender, EventArgs e)
         {
             customerListBox.DataSource = _customerController.GetAll();
-            bookingsListbox.DataSource = _bookingController.GetAll();
+            bookingsListbox.DataSource = _bookingController.GetAllActive();
             availableRoomsListbox.DataSource = _hotelRoomController.GetAllAvailable();
 
             customerListBox.SelectedIndex = -1;
