@@ -24,7 +24,7 @@ namespace NackademinHotel.Model
             Payed = payed;
         }
 
-        public void IsPayed(bool paid)
+        public void SetPaid(bool paid)
         {
             Payed = paid;
         }

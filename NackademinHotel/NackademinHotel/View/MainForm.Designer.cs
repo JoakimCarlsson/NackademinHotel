@@ -41,24 +41,28 @@
             // customerListBox
             // 
             this.customerListBox.FormattingEnabled = true;
-            this.customerListBox.Location = new System.Drawing.Point(12, 35);
+            this.customerListBox.ItemHeight = 15;
+            this.customerListBox.Location = new System.Drawing.Point(14, 40);
+            this.customerListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.customerListBox.Name = "customerListBox";
-            this.customerListBox.Size = new System.Drawing.Size(195, 199);
+            this.customerListBox.Size = new System.Drawing.Size(227, 229);
             this.customerListBox.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(14, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 23);
+            this.label1.Size = new System.Drawing.Size(126, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Registrerade Kunder";
             // 
             // manageCustomer
             // 
-            this.manageCustomer.Location = new System.Drawing.Point(12, 240);
+            this.manageCustomer.Location = new System.Drawing.Point(14, 277);
+            this.manageCustomer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.manageCustomer.Name = "manageCustomer";
-            this.manageCustomer.Size = new System.Drawing.Size(108, 23);
+            this.manageCustomer.Size = new System.Drawing.Size(126, 27);
             this.manageCustomer.TabIndex = 2;
             this.manageCustomer.Text = "Hantera Kunder";
             this.manageCustomer.UseVisualStyleBackColor = true;
@@ -66,9 +70,10 @@
             // 
             // manageBookings
             // 
-            this.manageBookings.Location = new System.Drawing.Point(235, 240);
+            this.manageBookings.Location = new System.Drawing.Point(274, 277);
+            this.manageBookings.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.manageBookings.Name = "manageBookings";
-            this.manageBookings.Size = new System.Drawing.Size(108, 23);
+            this.manageBookings.Size = new System.Drawing.Size(126, 27);
             this.manageBookings.TabIndex = 5;
             this.manageBookings.Text = "Hantera Bokningar";
             this.manageBookings.UseVisualStyleBackColor = true;
@@ -76,41 +81,47 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(235, 9);
+            this.label2.Location = new System.Drawing.Point(274, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 23);
+            this.label2.Size = new System.Drawing.Size(126, 27);
             this.label2.TabIndex = 4;
             this.label2.Text = "Aktiva Bokningar";
             // 
             // bookingsListbox
             // 
             this.bookingsListbox.FormattingEnabled = true;
-            this.bookingsListbox.Location = new System.Drawing.Point(235, 35);
+            this.bookingsListbox.ItemHeight = 15;
+            this.bookingsListbox.Location = new System.Drawing.Point(274, 40);
+            this.bookingsListbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bookingsListbox.Name = "bookingsListbox";
-            this.bookingsListbox.Size = new System.Drawing.Size(195, 199);
+            this.bookingsListbox.Size = new System.Drawing.Size(227, 229);
             this.bookingsListbox.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(455, 9);
+            this.label3.Location = new System.Drawing.Point(531, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 23);
+            this.label3.Size = new System.Drawing.Size(126, 27);
             this.label3.TabIndex = 7;
             this.label3.Text = "Lediga Rum";
             // 
             // availableRoomsListbox
             // 
             this.availableRoomsListbox.FormattingEnabled = true;
-            this.availableRoomsListbox.Location = new System.Drawing.Point(455, 35);
+            this.availableRoomsListbox.ItemHeight = 15;
+            this.availableRoomsListbox.Location = new System.Drawing.Point(531, 40);
+            this.availableRoomsListbox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.availableRoomsListbox.Name = "availableRoomsListbox";
-            this.availableRoomsListbox.Size = new System.Drawing.Size(214, 199);
+            this.availableRoomsListbox.Size = new System.Drawing.Size(249, 229);
             this.availableRoomsListbox.TabIndex = 6;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 390);
+            this.ClientSize = new System.Drawing.Size(793, 313);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.availableRoomsListbox);
             this.Controls.Add(this.manageBookings);
@@ -120,12 +131,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerListBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Hotel Service";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.ListBox availableRoomsListbox;

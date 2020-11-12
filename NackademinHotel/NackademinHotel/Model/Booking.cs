@@ -17,7 +17,7 @@ namespace NackademinHotel.Model
 
         public Booking()
         {
-            
+
         }
 
         public Booking(DateTime startBookDate, DateTime endBookDate, HotelRoom hotelRoom, Customer customer, int extraBeds)
@@ -32,7 +32,7 @@ namespace NackademinHotel.Model
         {
             Invoice = invoice;
         }
-        
+
         internal bool IsBooked()
         {
             return DateTime.Now >= StartBookDate && DateTime.Now < EndBookDate;
@@ -40,7 +40,7 @@ namespace NackademinHotel.Model
 
         public override string ToString()
         {
-            return $"Aktiv bokningar";
+            return Annulled ? $"Avbokad" : $"Aktiv bokning";
         }
 
         public void SetDates(DateTime startDate, DateTime endDate)

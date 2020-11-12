@@ -38,16 +38,8 @@ namespace NackademinHotel.Controller
         {
             using (_dbContext = new HotelContext())
             {
-                //Booking booking = new Booking
-                //{
-                //    Customer = _dbContext.Customers.FirstOrDefault(c => c.Id == customer.Id),
-                //    StartBookDate = startDate,
-                //    EndBookDate = endDate,
-                //    HotelRoom = _dbContext.HotelRooms.Include(h => h.Hotel).FirstOrDefault(h => h.Id == hotelRoom.Id),
-                //    Annulled = false,
-                //    ExtraBeds = extraBeds,
-                //    Invoice = _invoiceController.CreateInvoice(DateTime.Today, payed),
-                //};
+                customer = _dbContext.Customers.FirstOrDefault(c => c.Id == customer.Id);
+                hotelRoom = _dbContext.HotelRooms.Include(h => h.Hotel).FirstOrDefault(h => h.Id == hotelRoom.Id);
 
                 Booking booking = new Booking(startDate, endDate, hotelRoom, customer, extraBeds);
                 booking.SetInvoice(_invoiceController.CreateInvoice(DateTime.Today, paid));
@@ -69,7 +61,7 @@ namespace NackademinHotel.Controller
         public bool UpdateBooking(Booking booking, DateTime startDate, DateTime endDate, bool paid, int extraBeds)
         {
             booking.SetDates(startDate, endDate);
-            booking.Invoice.IsPayed(paid);
+            booking.Invoice.SetPaid(paid);
             booking.ExtraBeds = extraBeds;
             
             using (_dbContext = new HotelContext())
