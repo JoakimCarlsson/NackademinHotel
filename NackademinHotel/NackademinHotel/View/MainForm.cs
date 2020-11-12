@@ -14,24 +14,19 @@ namespace NackademinHotel
         private CustomerController _customerController;
         private BookingController _bookingController;
         private HotelRoomController _hotelRoomController;
-        private InvoiceController _invoiceController;
         public MainForm()
         {
             InitializeComponent();
             _customerController = new CustomerController();
             _bookingController = new BookingController();
             _hotelRoomController = new HotelRoomController();
-            _invoiceController = new InvoiceController();
 
             CheckInvoicesIfPaid();
         }
 
         private void CheckInvoicesIfPaid()
         {
-            foreach (Invoice invoice in _invoiceController.GetAll())
-            {
-                _invoiceController.IsPaidWithinDays(invoice, 10);
-            }
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)

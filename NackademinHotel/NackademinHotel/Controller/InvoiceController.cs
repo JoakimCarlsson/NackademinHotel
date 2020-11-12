@@ -9,8 +9,6 @@ namespace NackademinHotel.Controller
     public class InvoiceController
     {
         private HotelContext _hotelContext;
-        private BookingController _bookingController = new BookingController();
-
 
         internal IEnumerable<Invoice> GetAll()
         {
@@ -23,15 +21,6 @@ namespace NackademinHotel.Controller
         internal Invoice CreateInvoice(DateTime bookedDate, bool payed)
         {
             return new Invoice(bookedDate, payed);
-        }
-
-        internal void IsPaidWithinDays(Invoice invoice, int days)
-        {
-            if (!invoice.Payed)
-            {
-                if ((invoice.BookedDate - DateTime.Now).TotalDays < days)
-                   // _bookingController.CancelBooking(invoice);
-            }
         }
     }
 }
