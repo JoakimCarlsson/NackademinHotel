@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NackademinHotel.Data;
 using NackademinHotel.Model;
 
@@ -8,12 +9,14 @@ namespace NackademinHotel.Controller
     public class InvoiceController
     {
         private HotelContext _hotelContext;
+        private BookingController _bookingController = new BookingController();
+
 
         internal IEnumerable<Invoice> GetAll()
         {
             using (_hotelContext = new HotelContext())
             {
-                return _hotelContext.Invoices;
+                return _hotelContext.Invoices.ToList();
             }
         }
 
@@ -22,15 +25,13 @@ namespace NackademinHotel.Controller
             return new Invoice(bookedDate, payed);
         }
 
-        internal bool IsPaidWithinDays(Invoice invoice, int days)
+        internal void IsPaidWithinDays(Invoice invoice, int days)
         {
             if (!invoice.Payed)
             {
                 if ((invoice.BookedDate - DateTime.Now).TotalDays < days)
-                    return false;
+                   // _bookingController.CancelBooking(invoice);
             }
-
-            return true;
         }
     }
 }

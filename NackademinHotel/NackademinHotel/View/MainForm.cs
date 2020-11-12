@@ -22,6 +22,8 @@ namespace NackademinHotel
             _bookingController = new BookingController();
             _hotelRoomController = new HotelRoomController();
             _invoiceController = new InvoiceController();
+
+            CheckInvoicesIfPaid();
         }
 
         private void CheckInvoicesIfPaid()

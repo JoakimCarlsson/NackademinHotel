@@ -13,6 +13,8 @@ namespace NackademinHotel.Model
         [Required]
         public bool Payed { get; private set; }
 
+
+
         public Invoice()
         {
             
