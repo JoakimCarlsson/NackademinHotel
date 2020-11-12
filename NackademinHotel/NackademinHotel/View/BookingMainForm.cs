@@ -61,7 +61,7 @@ namespace NackademinHotel
             }
             else
             {
-                BookingRoomForm bookingRoomForm = new BookingRoomForm(hotelRoom, startDate.Value, endDate.Value);
+                BookingRoomForm bookingRoomForm = new BookingRoomForm(hotelRoom, startDate.Value, endDate.Value, (int)peopleAmount.Value);
                 bookingRoomForm.Show();
             }
         }
