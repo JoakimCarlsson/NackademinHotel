@@ -54,3 +54,4 @@ C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\o
 C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\obj\Debug\netcoreapp3.1\NackademinHotel.BookingForm.resources
 C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\obj\Debug\netcoreapp3.1\NackademinHotel.BookingRoomForm.resources
 C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\obj\Debug\netcoreapp3.1\NackademinHotel.BookingEditForm.resources
+C:\Users\Carlsson\source\repos\NackademinHotel\NackademinHotel\NackademinHotel\obj\Debug\netcoreapp3.1\NackademinHotel.csprojAssemblyReference.cache

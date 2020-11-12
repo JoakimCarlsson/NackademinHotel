@@ -82,5 +82,17 @@ namespace NackademinHotel.Controller
                 return true;
             }
         }
+
+        public void CheckIfPaidWithinDays(int days)
+        {
+            foreach (Booking booking in GetAll())
+            {
+                if (booking.Invoice.Payed || booking.Annulled)
+                    continue;
+
+                if ((DateTime.Now - booking.Invoice.BookedDate).TotalDays < days)
+                    CancelBooking(booking);
+            }
+        }
     }
 }

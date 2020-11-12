@@ -26,7 +26,7 @@ namespace NackademinHotel
 
         private void CheckInvoicesIfPaid()
         {
-
+            _bookingController.CheckIfPaidWithinDays(10);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
