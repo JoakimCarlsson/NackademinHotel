@@ -11,6 +11,7 @@ namespace NackademinHotel.Model
         public int RoomNumber { get; private set; }
         public double RoomSize { get; private set; }
         public bool DoubleRoom { get; private set; }
+        public int MaxPeople { get; set; }
         public int HotelId { get; private set; }
         public Hotel Hotel { get; private set; }
         public ICollection<Booking>? Bookings { get; private set; }
@@ -46,7 +47,7 @@ namespace NackademinHotel.Model
             return new []{0};
         }
 
-        internal bool IsAviable()
+        internal bool IsAvailable()
         {
             if (Bookings.Count != 0)
             {
@@ -64,6 +65,22 @@ namespace NackademinHotel.Model
             }
 
             return false;
+        }
+
+        internal int GetMaxPeople()
+        {
+            int max = 1;
+
+            if (DoubleRoom)
+            {
+                if (RoomSize >= 10 && RoomSize <= 15)
+                    max += 1;
+
+                if (RoomSize >= 15)
+                    max += 2;
+            }
+
+            return max;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace NackademinHotel.Controller
             {
                 foreach (HotelRoom hotelRoom in _hotelContext.HotelRooms.Include(b => b.Bookings))
                 {
-                    if (hotelRoom.IsAviable())
+                    if (hotelRoom.IsAvailable())
                     {
                         hotelRooms.Add(hotelRoom);
                     }
@@ -34,25 +34,34 @@ namespace NackademinHotel.Controller
             return _hotelContext.HotelRooms;
         }
 
-        internal IEnumerable<HotelRoom> GetAllAvailableBetweenDates(DateTime startDate, DateTime endDate)
+        internal IEnumerable<HotelRoom> GetAllAvailableBetweenDates(DateTime startDate, DateTime endDate, int maxPeople)
         {
             List<HotelRoom> tmpList = new List<HotelRoom>();
             using (_hotelContext = new HotelContext())
             {
+
                 foreach (HotelRoom hotelRoom in _hotelContext.HotelRooms.Include(h => h.Bookings))
                 {
-                    if (hotelRoom.Bookings.Count == 0)
+                    if (hotelRoom.MaxPeople >= maxPeople)
                     {
-                        tmpList.Add(hotelRoom);
-                        continue;
-                    }
-
-                    foreach (Booking hotelRoomBooking in hotelRoom.Bookings)
-                    {
-                        if(startDate <= hotelRoomBooking.StartBookDate && endDate <= hotelRoomBooking.StartBookDate || startDate >= hotelRoomBooking.EndBookDate && endDate >= hotelRoomBooking.EndBookDate || hotelRoomBooking.Annulled)
+                        if (hotelRoom.Bookings.Count == 0)
                         {
                             tmpList.Add(hotelRoom);
+                            continue;
                         }
+
+                        foreach (Booking hotelRoomBooking in hotelRoom.Bookings)
+                        {
+                            if (startDate <= hotelRoomBooking.StartBookDate && endDate <= hotelRoomBooking.StartBookDate || startDate >= hotelRoomBooking.EndBookDate && endDate >= hotelRoomBooking.EndBookDate || hotelRoomBooking.Annulled)
+                            {
+
+                                tmpList.Add(hotelRoom);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        tmpList.Remove(hotelRoom);
                     }
                 }
             }

@@ -41,6 +41,9 @@ namespace NackademinHotel
             this.endDate = new System.Windows.Forms.DateTimePicker();
             this.editButton = new System.Windows.Forms.Button();
             this.bookRoom = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.peopleAmount = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize) (this.peopleAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // bookinListBox
@@ -77,17 +80,17 @@ namespace NackademinHotel
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(441, 34);
+            this.label3.Location = new System.Drawing.Point(433, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 24);
+            this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Start Datum";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(441, 64);
+            this.label4.Location = new System.Drawing.Point(433, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 24);
+            this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Slut Datum";
             // 
@@ -101,7 +104,7 @@ namespace NackademinHotel
             // 
             // endDate
             // 
-            this.endDate.Location = new System.Drawing.Point(526, 58);
+            this.endDate.Location = new System.Drawing.Point(526, 61);
             this.endDate.Name = "endDate";
             this.endDate.Size = new System.Drawing.Size(153, 20);
             this.endDate.TabIndex = 8;
@@ -127,11 +130,33 @@ namespace NackademinHotel
             this.bookRoom.UseVisualStyleBackColor = true;
             this.bookRoom.Click += new System.EventHandler(this.bookRoom_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(433, 88);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Antal Gäster";
+            // 
+            // peopleAmount
+            // 
+            this.peopleAmount.Location = new System.Drawing.Point(526, 88);
+            this.peopleAmount.Maximum = new decimal(new int[] {4, 0, 0, 0});
+            this.peopleAmount.Minimum = new decimal(new int[] {1, 0, 0, 0});
+            this.peopleAmount.Name = "peopleAmount";
+            this.peopleAmount.Size = new System.Drawing.Size(153, 20);
+            this.peopleAmount.TabIndex = 16;
+            this.peopleAmount.Value = new decimal(new int[] {1, 0, 0, 0});
+            this.peopleAmount.ValueChanged += new System.EventHandler(this.peopleAmount_ValueChanged);
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 450);
+            this.ClientSize = new System.Drawing.Size(694, 450);
+            this.Controls.Add(this.peopleAmount);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.bookRoom);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.endDate);
@@ -147,8 +172,12 @@ namespace NackademinHotel
             this.Name = "BookingForm";
             this.Text = "BookingForm";
             this.Load += new System.EventHandler(this.BookingForm_Load);
+            ((System.ComponentModel.ISupportInitialize) (this.peopleAmount)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
+
+        private System.Windows.Forms.NumericUpDown peopleAmount;
 
         private System.Windows.Forms.Button bookRoom;
 
@@ -169,5 +198,7 @@ namespace NackademinHotel
         private System.Windows.Forms.Label label1;
 
         #endregion
+
+        private System.Windows.Forms.Label label5;
     }
 }

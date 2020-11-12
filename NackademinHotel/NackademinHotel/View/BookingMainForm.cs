@@ -48,7 +48,7 @@ namespace NackademinHotel
 
         private void GetRoomsAvailable()
         {
-            availableRooms.DataSource = _hotelRoomController.GetAllAvailableBetweenDates(startDate.Value, endDate.Value);
+            availableRooms.DataSource = _hotelRoomController.GetAllAvailableBetweenDates(startDate.Value, endDate.Value, (int)peopleAmount.Value);
             availableRooms.SelectedIndex = -1;
         }
 
@@ -64,6 +64,11 @@ namespace NackademinHotel
                 BookingRoomForm bookingRoomForm = new BookingRoomForm(hotelRoom, startDate.Value, endDate.Value);
                 bookingRoomForm.Show();
             }
+        }
+
+        private void peopleAmount_ValueChanged(object sender, EventArgs e)
+        {
+            GetRoomsAvailable();
         }
     }
 }
